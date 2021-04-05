@@ -79,7 +79,7 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
          Submitted by{' '}
          {/*http://node-hnapi.herokuapp.com/user/{user} 
          seems deprecated, after some research I found 
-          https://news.ycombinator.com/user?id=${user} to work just fine  */}
+          https://news.ycombinator.com/user?id=${user} to work just fine*/}
           <Link url={`https://news.ycombinator.com/user?id=${user}`} title={user} />
         </span>
         
