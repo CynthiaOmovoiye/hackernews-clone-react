@@ -33,7 +33,7 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
       <div className="story-title">
         <h4 className="font-weight-bold">
         <Link url={url} title={title} />
-        <span className="domain ml-2"><Link  url={`${domain}`} title={domain} /></span>
+        <span className="domain ml-2"><Link  url={`https://${domain}`} title={domain} /></span>
         </h4>
          
       </div>
