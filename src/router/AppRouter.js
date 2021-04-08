@@ -29,7 +29,7 @@ const AppRouter = () => {
       
       //  return <Redirect to="/:post_id" />;
        
-      return <Contact></Contact>;
+      return <Post></Post>;
     }
     return <ShowStories type={type} />;
   }}
