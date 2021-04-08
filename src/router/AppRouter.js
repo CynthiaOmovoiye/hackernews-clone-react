@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Header from '../components/Headers';
-import Contact from '../components/post';
+import Post from '../components/post';
 import ShowStories from '../components/ShowStories';
 
 
@@ -34,7 +34,7 @@ const AppRouter = () => {
     return <ShowStories type={type} />;
   }}
 />
-<Route path="/:post_id" component={Contact} />
+<Route path="/:post_id" component={Post} />
         </Switch>
       </div>
     </BrowserRouter>

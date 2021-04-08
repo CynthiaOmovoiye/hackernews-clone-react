@@ -12,7 +12,7 @@ const Alink = ({ url, title }) => (
   </a>
 );
 
-const Contact = () => {
+const Post = () => {
 	const location = useLocation()
 
 
@@ -151,4 +151,4 @@ function Comment({ comment,postAuthor }) {
     )
 } 
 
-export default Contact
+export default Post
