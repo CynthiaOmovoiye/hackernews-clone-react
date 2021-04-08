@@ -25,7 +25,7 @@ const Contact = () => {
     console.log(post)
   }, [post])
   const fetchpost=async()=>{
-    const response=await axios(`http://node-hnapi.herokuapp.com${location.pathname}`);
+    const response=await axios(`https://node-hnapi.herokuapp.com${location.pathname}`);
     setpost(response.data)    
   }
   return (
