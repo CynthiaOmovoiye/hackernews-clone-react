@@ -91,7 +91,7 @@ const Contact = () => {
     
        <div className="card-body">
        {
-        post.comments && post.comments.map((comment) => <Comment postAuthor={comment.user} key={comment.id} comment={comment} />
+        post.comments && post.comments.map((comment) => <Comment postAuthor={post.user} key={comment.id} comment={comment} />
          
         )
       }
