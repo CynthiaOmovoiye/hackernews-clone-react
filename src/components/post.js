@@ -130,10 +130,11 @@ function Comment({ comment,postAuthor }) {
     return (
       // this margin causes the recursive nested comments to indent so
       // the user can see the thread
+    
       <div style={{"marginLeft": "45px",marginBottom:'10px'}}>
       <div style={{display:'inline',fontWeight:'bold',fontSize:'large'}} onClick={()=> setShowChildren(!showChildren)}>{showChildren ? '-' : '+'}<img src={`https://robohash.org/${comment.user}.png`} style={{width:'30px',marginRight:'4px',verticalAlign:'middle'}} title='' alt=''></img>
-      <span style={{fontWeight:'bold'}}>{comment.user}</span> 
-      {comment.user===postAuthor && <img src="" alt='' title='Original Author' style={{width:'16px',marginLeft:'4px'}} />}
+      <span style={{fontWeight:'bold'}}>{comment.user}</span> <span style={{fontSize:'10pt'}}>{comment.time_ago}</span>
+      {comment.user===postAuthor && <img src="https://robohash.org/original.png" alt='' title='Original Author' style={{width:'16px',marginLeft:'4px'}} />}
       </div>
       {/* this left border is the line that connects the comments on the same level in the thread */}
       {showChildren && 
