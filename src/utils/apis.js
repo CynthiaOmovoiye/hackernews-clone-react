@@ -1,17 +1,18 @@
 import axios from 'axios';
 import { BASE_API_URL } from './constants';
-export const storyUrl = `${BASE_API_URL}/item/`;
+const storyUrl = `${BASE_API_URL}/item/`;
 
-const getStory = async (storyId) => {
+export const getStory = async (storyId) => {
   let {id} = storyId
-  console.log(storyId, id)
+  // console.log(storyId, id)
   try {
     const story = await axios.get(`${storyUrl}${id}`);
-    console.log(story)
+    // console.log(story)
     return story;
   } catch (error) {
     console.log('Error while getting a story.');
   }
+ 
 };
 
 export const getStories = async (type) => {
@@ -20,6 +21,7 @@ export const getStories = async (type) => {
       `${BASE_API_URL}/${type}`
     );
     const stories = await Promise.all(storyIds.map(getStory));
+    console.log(stories)
     return stories;
   } catch (error) {
     console.log('Error while getting list of stories.');

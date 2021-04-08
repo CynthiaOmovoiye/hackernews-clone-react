@@ -1,5 +1,6 @@
 import React from 'react';
 import Story from './Story';
+
 import useDataFetcher from '../hooks/dataFetcher';
 
 const ShowStories = ({ type }) => {
@@ -12,6 +13,7 @@ const ShowStories = ({ type }) => {
       ) : (
         <React.Fragment>
           {stories.map(({ data: story }) => (
+             
             <Story key={story.id} story={story} />
           ))}
         </React.Fragment>

@@ -149,6 +149,29 @@ h1 {
 .post-info, .user{
   width: 50%;
 }
+
+.post_grid {
+  display: grid;
+  grid-template: auto auto auto 1fr / auto 402px;
+
+  .post {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2
+  }
+  .metadata {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3
+  }
+  .video-info-box {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+  }
+  .comments {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5
+  }
+  
+}
 @media screen and (max-width: 600px) {
   body {
     font-size: 0.9rem;

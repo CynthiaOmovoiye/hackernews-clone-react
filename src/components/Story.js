@@ -1,8 +1,9 @@
 import React from 'react';
 // import { BASE_API_URL } from '../utils/constants';
+import {Link} from 'react-router-dom';
 
 
-const Link = ({ url, title }) => (
+const Alink = ({ url, title }) => (
   <a href={url} target="_blank" rel="noreferrer">
     {title}
   </a>
@@ -10,6 +11,7 @@ const Link = ({ url, title }) => (
 
 const Story = ({ story: { id, user, title, comments_count, time_ago, url,points, domain } }) => {
   return (
+    
     <div className="d-flex">
       <div className="points">
       <span className="card">
@@ -32,8 +34,8 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
  <div className="story card">
       <div className="story-title">
         <h4 className="font-weight-bold">
-        <Link url={url} title={title} />
-        <span className="domain ml-2"><Link  url={`https://${domain}`} title={domain} /></span>
+        <Alink url={url} title={title} />
+        <span className="domain ml-2"><Alink  url={`https://${domain}`} title={domain} /></span>
         </h4>
          
       </div>
@@ -55,10 +57,13 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
           
           */}
           <Link
+          to={`/item/${id}`}
+          data={id}
+          >
+         {`${comments_count}`}Comments
           
-            url={`https://news.ycombinator.com/item?id=${id}`}
-            title={`${comments_count} comments` }
-          />
+           
+          </Link>
         </span>
         <span className="w-50">
         <i
@@ -80,7 +85,7 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
          {/*http://node-hnapi.herokuapp.com/user/{user} 
          seems deprecated, after some research I found 
           https://news.ycombinator.com/user?id=${user} to work just fine*/}
-          <Link url={`https://news.ycombinator.com/user?id=${user}`} title={user} />
+          <Alink url={`https://news.ycombinator.com/user?id=${user}`} title={user} />
         </span>
         
         
@@ -89,7 +94,12 @@ const Story = ({ story: { id, user, title, comments_count, time_ago, url,points,
       </div>
     </div>
  
+    
+    
+    
     </div>
+    
+    
     );
 
 };
