@@ -1,10 +1,10 @@
-import React from 'react';
-import Story from './Story';
+import React from "react";
+import Story from "./Story";
 
-import useDataFetcher from '../hooks/dataFetcher';
+import useDataFetcher from "../hooks/dataFetcher";
 
 const ShowStories = ({ type }) => {
-    const { isLoading, stories } = useDataFetcher(type ? type : 'news');
+  const { isLoading, stories } = useDataFetcher(type ? type : "news");
 
   return (
     <React.Fragment>
@@ -13,7 +13,6 @@ const ShowStories = ({ type }) => {
       ) : (
         <React.Fragment>
           {stories.map(({ data: story }) => (
-             
             <Story key={story.id} story={story} />
           ))}
         </React.Fragment>

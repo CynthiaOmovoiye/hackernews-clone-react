@@ -21,7 +21,7 @@ export const getStories = async (type) => {
       `${BASE_API_URL}/${type}`
     );
     const stories = await Promise.all(storyIds.map(getStory));
-    console.log(stories)
+   
     return stories;
   } catch (error) {
     console.log('Error while getting list of stories.');

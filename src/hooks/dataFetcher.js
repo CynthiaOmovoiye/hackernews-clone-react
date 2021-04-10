@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { getStories } from '../utils/apis';
+import { useState, useEffect } from "react";
+import { getStories } from "../utils/apis";
 
 const useDataFetcher = (type) => {
   const [stories, setStories] = useState([]);
