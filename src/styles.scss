@@ -153,12 +153,16 @@ h1 {
     a {
       color: inherit;
     }
+    
     .user {
       a {
         color: #fa7a48;
       }
     }
   }
+}
+.post-info{
+  width: 70%;
 }
 
 @media screen and (max-width: 768px) {

@@ -39,7 +39,7 @@ const Story = ({
         </div>
         <div className="story-info d-flex flex-column flex-md-row align-items-md-center">
           <div className="d-flex post-info">
-            <span className="w-50">
+            <span className="">
               <i
                 className="fas fa-comments"
                 style={{
@@ -55,7 +55,7 @@ const Story = ({
                 {`${comments_count}`} Comments
               </Link>
             </span>
-            <span className="w-50">
+            <span className="">
               <i
                 className="fas fa-clock"
                 style={{
